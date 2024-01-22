@@ -1,0 +1,7 @@
+postsservice\PostsServiceApplication.class
+postsservice\service\PostService.class
+postsservice\configuration\Configuration.class
+postsservice\repositories\PostsRepository.class
+postsservice\dtos\PostDto.class
+postsservice\models\Post.class
+postsservice\controllers\PostsController.class

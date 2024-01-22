@@ -1,0 +1,15 @@
+package pricecalculationservice.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class OrderDetailsDTOWithMileage {
+
+    private OrderDetailsDTO orderDetailsDTO;
+    private int mileage;
+
+}

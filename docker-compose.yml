@@ -1,0 +1,150 @@
+version: '3'
+
+services:
+
+  naming-server:
+    container_name: naming-server
+    mem_limit: 350m
+    build: naming-server
+    ports:
+      - 8761:8761
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
+    depends_on:
+      configuration-server:
+        condition: service_healthy
+
+  api-gateway:
+    container_name: api-gateway
+    mem_limit: 350m
+    build: api-gateway
+    ports:
+      - 8765:8765
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
+    depends_on:
+      - configuration-server
+      - naming-server
+
+  posts-service:
+    container_name: posts-service
+    mem_limit: 350m
+    build: posts-service
+    ports:
+      - 8081:8081
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
+    depends_on:
+      - configuration-server
+      - naming-server
+
+  ordering-service:
+    container_name: ordering-service
+    mem_limit: 350m
+    build: ordering-service
+    ports:
+      - 8085:8085
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
+    depends_on:
+      - configuration-server
+      - naming-server
+
+  tracking-service:
+    container_name: tracking-service
+    mem_limit: 350m
+    build: tracking-service
+    ports:
+      - 8084:8084
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
+    depends_on:
+      - configuration-server
+      - naming-server
+
+  couriers-service:
+    container_name: couriers-service
+    mem_limit: 350m
+    build: couriers-service
+    ports:
+      - 8083:8083
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
+    depends_on:
+      - configuration-server
+      - naming-server
+
+  price-calculation-service:
+    container_name: price-calculation-service
+    mem_limit: 350m
+    build: price-calculation-service
+    ports:
+      - 8082:8082
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
+    depends_on:
+      - configuration-server
+      - naming-server
+
+  configuration-server:
+    container_name: config-server
+    mem_limit: 350m
+    build: configuration-server
+    ports:
+      - 8888:8888
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:8888/naming-server/default"]
+        interval: 10s
+        timeout: 10s
+        retries: 5
+
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - 9411:9411
+
+  mongo-express:
+    image: mongo-express:latest
+    mem_limit: 350m
+    ports:
+      - 8071:8081
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: admin
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    ports:
+      - 27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - ./Volumes/Mongo:/data/db
+    healthcheck:
+      test: "mongo --eval 'db.stats().ok'"
+      interval: 20s
+      timeout: 5s
+      retries: 10
+
+
+

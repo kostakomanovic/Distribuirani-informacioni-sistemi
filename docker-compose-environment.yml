@@ -1,0 +1,39 @@
+version: '3'
+services:
+  jenkins:
+    build: Jenkins
+    ports:
+      - 8072:8080
+    user: root
+    privileged: true
+    volumes:
+       - ./Volumes/Jenkins:/var/jenkins_home
+       - /var/run/docker.sock:/var/run/docker.sock
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:18.0.1
+    mem_limit: 350m
+    ports:
+      - 8099:8080
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    volumes:
+      - ./Volumes/Keycloak:/opt/keycloak/data/
+    command: start-dev
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus
+    mem_limit: 350m
+    ports: 
+      - 9090:9090
+    volumes:
+      - ./Volumes/Prometheus:/etc/prometheus/
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana
+    mem_limit: 350m
+    ports: 
+      - 3000:3000

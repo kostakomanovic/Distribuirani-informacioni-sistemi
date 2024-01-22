@@ -1,0 +1,1762 @@
+{
+	"info": {
+		"_postman_id": "8209654c-db62-4544-8892-11e37d3abadc",
+		"name": "Post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Gateway",
+			"item": [
+				{
+					"name": "Price calculation",
+					"item": [
+						{
+							"name": "Calculate price",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/price-calculation-service/calculate-price?typeOfService=TODAY_FOR_TODAY&weight=2&sourcePostId=jasdkqwi2d21i2n&destinationPostId=ojwqiorj2j",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"price-calculation-service",
+										"calculate-price"
+									],
+									"query": [
+										{
+											"key": "typeOfService",
+											"value": "TODAY_FOR_TODAY"
+										},
+										{
+											"key": "weight",
+											"value": "2"
+										},
+										{
+											"key": "sourcePostId",
+											"value": "jasdkqwi2d21i2n"
+										},
+										{
+											"key": "destinationPostId",
+											"value": "ojwqiorj2j"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Couriers service",
+					"item": [
+						{
+							"name": "Get all couriers",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/couriers-service/couriers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"couriers-service",
+										"couriers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get courier by id",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/couriers-service/couriers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"couriers-service",
+										"couriers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Insert courier",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": null,\r\n    \"firstName\": \"Luka\",\r\n    \"lastName\": \"Rad\",\r\n    \"personalIdNumber\": \"123123123231\",\r\n    \"comments\": null,\r\n    \"yearsOfExperience\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/couriers-service/couriers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"couriers-service",
+										"couriers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update courier",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": null,\r\n    \"firstName\": \"Luka\",\r\n    \"lastName\": \"Radujevic\",\r\n    \"personalIdNumber\": \"123123123231\",\r\n    \"comments\": null,\r\n    \"yearsOfExperience\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/couriers-service/couriers/62e86080d64aad63ab3bf3ee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"couriers-service",
+										"couriers",
+										"62e86080d64aad63ab3bf3ee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete courier",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": null,\r\n    \"firstName\": \"Luka\",\r\n    \"lastName\": \"Radujevic\",\r\n    \"personalIdNumber\": \"123123123231\",\r\n    \"comments\": null,\r\n    \"yearsOfExperience\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/couriers-service/couriers/62e86080d64aad63ab3bf3ee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"couriers-service",
+										"couriers",
+										"62e86080d64aad63ab3bf3ee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Insert comment for courier",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\": \"Test\",\r\n    \"isPositive\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/couriers-service/couriers/62e861a2d64aad63ab3bf3ef/comment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"couriers-service",
+										"couriers",
+										"62e861a2d64aad63ab3bf3ef",
+										"comment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete comment for courier",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\": \"Test\",\r\n    \"isPositive\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/couriers-service/couriers/62e861a2d64aad63ab3bf3ef/comment/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"couriers-service",
+										"couriers",
+										"62e861a2d64aad63ab3bf3ef",
+										"comment",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tracking service",
+					"item": [
+						{
+							"name": "Get trackings for order",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/tracking-service/tracking/123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"tracking-service",
+										"tracking",
+										"123"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save new tracking",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\": \"123\",\r\n    \"post\": {\r\n        \"id\": \"123\",\r\n        \"name\": \"Posta Kraljevo\",\r\n        \"address\": \"Ibarska 22\"\r\n    },\r\n    \"courier\": {\r\n        \"id\": \"123\",\r\n        \"fullName\": \"Luka Rad\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/tracking-service/tracking",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"tracking-service",
+										"tracking"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Posts service",
+					"item": [
+						{
+							"name": "Get all posts",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/posts-service/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"posts-service",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get post by id",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/posts-service/posts/62e85c7c953c02432b83239b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"posts-service",
+										"posts",
+										"62e85c7c953c02432b83239b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Insert post",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"123\",\r\n    \"name\": \"Posta Kraljevo\",\r\n    \"address\": \"Ibarska 22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/posts-service/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"posts-service",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update post",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"123\",\r\n    \"name\": \"Posta Kraljevo\",\r\n    \"address\": \"Ibarska 23\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/posts-service/posts/62e85c7c953c02432b83239b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"posts-service",
+										"posts",
+										"62e85c7c953c02432b83239b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete post",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"123\",\r\n    \"name\": \"Posta Kraljevo\",\r\n    \"address\": \"Ibarska 22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/posts-service/posts/62e85c7c953c02432b83239b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"posts-service",
+										"posts",
+										"62e85c7c953c02432b83239b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get mileage between posts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "aq7lkUGsB4ka7hOcroEmjNFiEVnJ0WtL",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8099/realms/Post/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"123\",\r\n    \"name\": \"Posta Kraljevo\",\r\n    \"address\": \"Ibarska 22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/posts-service/mileage/from/123/to/456",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"posts-service",
+										"mileage",
+										"from",
+										"123",
+										"to",
+										"456"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ordering service",
+					"item": [
+						{
+							"name": "Get order by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/order/123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"order",
+										"123"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get orders for user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/ordering-service/order/user/123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"ordering-service",
+										"order",
+										"user",
+										"123"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create order",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"123\",\r\n    \"userName\": \"Marko\",\r\n    \"userLastName\": \"Radovic\",\r\n    \"userAddress\": \"Macvanska 11\",\r\n    \"userPhoneNumber\": \"123-123\",\r\n    \"productName\": \"mobilni\",\r\n    \"productWeight\": 0.8,\r\n    \"sourcePost\": {\r\n        \"id\": \"12fds\",\r\n        \"name\": \"Posta Kraljevo\",\r\n        \"address\": \"Ibarska 22\"\r\n    },\r\n    \"destinationPost\": {\r\n        \"id\": \"0sd12f\",\r\n        \"name\": \"Posta Cacak\",\r\n        \"address\": \"Moravska 11\"\r\n    },\r\n    \"typeOfService\": \"TODAY_FOR_TOMORROW_AFTER_11\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/ordering-service/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"ordering-service",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel order",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"123\",\r\n    \"userName\": \"Marko\",\r\n    \"userLastName\": \"Radovic\",\r\n    \"userAddress\": \"Macvanska 11\",\r\n    \"userPhoneNumber\": \"123-123\",\r\n    \"productName\": \"mobilni\",\r\n    \"productWeight\": 0.8,\r\n    \"sourcePost\": {\r\n        \"id\": \"12fds\",\r\n        \"name\": \"Posta Kraljevo\",\r\n        \"address\": \"Ibarska 22\"\r\n    },\r\n    \"destinationPost\": {\r\n        \"id\": \"0sd12f\",\r\n        \"name\": \"Posta Cacak\",\r\n        \"address\": \"Moravska 11\"\r\n    },\r\n    \"typeOfService\": \"TODAY_FOR_TOMORROW_AFTER_11\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/ordering-service/order/62e99ef2371890437b723765/cancel",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"ordering-service",
+										"order",
+										"62e99ef2371890437b723765",
+										"cancel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Finish order",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"123\",\r\n    \"userName\": \"Marko\",\r\n    \"userLastName\": \"Radovic\",\r\n    \"userAddress\": \"Macvanska 11\",\r\n    \"userPhoneNumber\": \"123-123\",\r\n    \"productName\": \"mobilni\",\r\n    \"productWeight\": 0.8,\r\n    \"sourcePost\": {\r\n        \"id\": \"12fds\",\r\n        \"name\": \"Posta Kraljevo\",\r\n        \"address\": \"Ibarska 22\"\r\n    },\r\n    \"destinationPost\": {\r\n        \"id\": \"0sd12f\",\r\n        \"name\": \"Posta Cacak\",\r\n        \"address\": \"Moravska 11\"\r\n    },\r\n    \"typeOfService\": \"TODAY_FOR_TOMORROW_AFTER_11\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/ordering-service/order/62e99ef2371890437b723765/cancel",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"ordering-service",
+										"order",
+										"62e99ef2371890437b723765",
+										"cancel"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Posts service",
+			"item": [
+				{
+					"name": "Get all posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get post by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/posts/62e85c7c953c02432b83239b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"posts",
+								"62e85c7c953c02432b83239b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"123\",\r\n    \"name\": \"Posta Kraljevo\",\r\n    \"address\": \"Ibarska 22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"123\",\r\n    \"name\": \"Posta Kraljevo\",\r\n    \"address\": \"Ibarska 23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/posts/62e85c7c953c02432b83239b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"posts",
+								"62e85c7c953c02432b83239b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"123\",\r\n    \"name\": \"Posta Kraljevo\",\r\n    \"address\": \"Ibarska 22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/posts/62e85c7c953c02432b83239b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"posts",
+								"62e85c7c953c02432b83239b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get mileage between posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"123\",\r\n    \"name\": \"Posta Kraljevo\",\r\n    \"address\": \"Ibarska 22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/mileage/from/123/to/456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"mileage",
+								"from",
+								"123",
+								"to",
+								"456"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ordering service",
+			"item": [
+				{
+					"name": "Get order by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/order/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get orders for user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/order/user/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"user",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"123\",\r\n    \"userName\": \"Marko\",\r\n    \"userLastName\": \"Radovic\",\r\n    \"userAddress\": \"Macvanska 11\",\r\n    \"userPhoneNumber\": \"123-123\",\r\n    \"productName\": \"mobilni\",\r\n    \"productWeight\": 0.8,\r\n    \"sourcePost\": {\r\n        \"id\": \"12fds\",\r\n        \"name\": \"Posta Kraljevo\",\r\n        \"address\": \"Ibarska 22\"\r\n    },\r\n    \"destinationPost\": {\r\n        \"id\": \"0sd12f\",\r\n        \"name\": \"Posta Cacak\",\r\n        \"address\": \"Moravska 11\"\r\n    },\r\n    \"typeOfService\": \"TODAY_FOR_TOMORROW_AFTER_11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"123\",\r\n    \"userName\": \"Marko\",\r\n    \"userLastName\": \"Radovic\",\r\n    \"userAddress\": \"Macvanska 11\",\r\n    \"userPhoneNumber\": \"123-123\",\r\n    \"productName\": \"mobilni\",\r\n    \"productWeight\": 0.8,\r\n    \"sourcePost\": {\r\n        \"id\": \"12fds\",\r\n        \"name\": \"Posta Kraljevo\",\r\n        \"address\": \"Ibarska 22\"\r\n    },\r\n    \"destinationPost\": {\r\n        \"id\": \"0sd12f\",\r\n        \"name\": \"Posta Cacak\",\r\n        \"address\": \"Moravska 11\"\r\n    },\r\n    \"typeOfService\": \"TODAY_FOR_TOMORROW_AFTER_11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/order/62e99ef2371890437b723765/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"62e99ef2371890437b723765",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finish order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"123\",\r\n    \"userName\": \"Marko\",\r\n    \"userLastName\": \"Radovic\",\r\n    \"userAddress\": \"Macvanska 11\",\r\n    \"userPhoneNumber\": \"123-123\",\r\n    \"productName\": \"mobilni\",\r\n    \"productWeight\": 0.8,\r\n    \"sourcePost\": {\r\n        \"id\": \"12fds\",\r\n        \"name\": \"Posta Kraljevo\",\r\n        \"address\": \"Ibarska 22\"\r\n    },\r\n    \"destinationPost\": {\r\n        \"id\": \"0sd12f\",\r\n        \"name\": \"Posta Cacak\",\r\n        \"address\": \"Moravska 11\"\r\n    },\r\n    \"typeOfService\": \"TODAY_FOR_TOMORROW_AFTER_11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/order/62e99ef2371890437b723765/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"62e99ef2371890437b723765",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Couriers service",
+			"item": [
+				{
+					"name": "Get all couriers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/couriers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"couriers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get courier by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/couriers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"couriers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert courier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": null,\r\n    \"firstName\": \"Luka\",\r\n    \"lastName\": \"Rad\",\r\n    \"personalIdNumber\": \"123123123231\",\r\n    \"comments\": null,\r\n    \"yearsOfExperience\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/couriers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"couriers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update courier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": null,\r\n    \"firstName\": \"Luka\",\r\n    \"lastName\": \"Radujevic\",\r\n    \"personalIdNumber\": \"123123123231\",\r\n    \"comments\": null,\r\n    \"yearsOfExperience\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/couriers/62e86080d64aad63ab3bf3ee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"couriers",
+								"62e86080d64aad63ab3bf3ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete courier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": null,\r\n    \"firstName\": \"Luka\",\r\n    \"lastName\": \"Radujevic\",\r\n    \"personalIdNumber\": \"123123123231\",\r\n    \"comments\": null,\r\n    \"yearsOfExperience\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/couriers/62e86080d64aad63ab3bf3ee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"couriers",
+								"62e86080d64aad63ab3bf3ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert comment for courier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"Test\",\r\n    \"isPositive\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/couriers/62e861a2d64aad63ab3bf3ef/comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"couriers",
+								"62e861a2d64aad63ab3bf3ef",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment for courier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"Test\",\r\n    \"isPositive\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/couriers/62e861a2d64aad63ab3bf3ef/comment/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"couriers",
+								"62e861a2d64aad63ab3bf3ef",
+								"comment",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Price calculation service",
+			"item": [
+				{
+					"name": "Calculate price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/calculate-price?typeOfService=TODAY_FOR_TODAY&weight=2&sourcePostId=jasdkqwi2d21i2n&destinationPostId=ojwqiorj2j",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"calculate-price"
+							],
+							"query": [
+								{
+									"key": "typeOfService",
+									"value": "TODAY_FOR_TODAY"
+								},
+								{
+									"key": "weight",
+									"value": "2"
+								},
+								{
+									"key": "sourcePostId",
+									"value": "jasdkqwi2d21i2n"
+								},
+								{
+									"key": "destinationPostId",
+									"value": "ojwqiorj2j"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tracking service",
+			"item": [
+				{
+					"name": "Get trackings for order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/tracking/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"tracking",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save new tracking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"123\",\r\n    \"post\": {\r\n        \"id\": \"123\",\r\n        \"name\": \"Posta Kraljevo\",\r\n        \"address\": \"Ibarska 22\"\r\n    },\r\n    \"courier\": {\r\n        \"id\": \"123\",\r\n        \"fullName\": \"Luka Rad\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/tracking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"tracking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
